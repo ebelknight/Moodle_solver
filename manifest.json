@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Math CAPTCHA Solver",
+  "version": "1.0",
+  "description": "Automatically solves simple math CAPTCHAs.",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moodle.iitd.ac.in/login/index.php"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
